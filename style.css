@@ -1,0 +1,133 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+    font-size: 20px;
+}
+
+body{
+    background-color: #ffebee;
+    padding: 20px;
+}
+
+h1{
+    margin-top: 120px;
+    display: block;
+    text-align: center;
+    font-size: 40px;
+}
+
+hr, .gros{
+    display: flex;
+    margin: 0 auto;
+}
+
+.gros{
+    margin-top: 40px;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+}
+hr{
+    width: 40%;
+    color: #FFFFFF;
+    background-color: #FFFFFF;
+    padding: 3px;
+    border-radius: 6px;
+}
+
+/* ******Deut du formulaire******* */
+form{
+    display: flex;
+    transition : display 2s ease-out; 
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    flex-wrap: wrap;
+    transform: translate(-50%, -50%);
+}
+
+
+#name{
+    width: 452px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+#button{
+    width: 152px;
+    padding: 10px;
+    margin: 5px;
+    outline: none;
+    cursor: pointer;
+}
+/* ********Fin du formulaire******** */
+#sectionAffichage{
+    transition : top 0.5s ease-out; 
+    background-color: rgb(94, 169, 235);
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    position: absolute;
+    top: 65%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-bottom: 2px solid #000;
+    border-radius: 6px;
+}
+
+#affiche{
+    font-weight: bolder;
+    color: #3c0202;
+    width: 454px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+#copier{
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-self: flex-end;
+    padding: 10px; 
+    background: #FFFFFF;
+}
+/* ********Manip boutton de couleur******* */
+.couleur{
+    transition : top 0.3s ease-out; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    top: 85%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.nth{
+    margin: 25px;
+    padding: 20px 25px;
+    cursor:pointer;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solide #fffde7;
+    outline: none;
+    font-weight: 600;
+}
+
+.nth:hover{
+    background-color: #FFFFFF;
+    transition: 0.2s;
+}
+
