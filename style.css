@@ -6,7 +6,6 @@
 }
 
 body{
-    background-color: #e57373;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -48,11 +47,14 @@ form{
     display: flex;
     transition : display 2s ease-out; 
     justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+
 }
 
-
 #name{
-    width: 452px;
+    width: 70%;
     padding: 10px;
     margin: 5px;
     border-radius: 6px;
@@ -60,7 +62,7 @@ form{
 }
 
 #button{
-    width: 152px;
+    width: 20%;
     padding: 10px;
     margin: 5px;
     outline: none;
@@ -103,10 +105,6 @@ form{
     justify-content: center;
     align-items: center;
     align-content: center;
-    /* position: absolute;
-    top: 85%;
-    left:50%;
-    transform: translate(-50%, -50%); */
 }
 
 .nth{
@@ -123,3 +121,24 @@ form{
 }
 
 
+/* Changement de taille */
+
+@media screen and (max-width: 1040px){
+    main{
+        width: 90%;
+    }
+    
+}
+
+@media screen and (max-width: 670px){
+    main{
+        width: 100%;
+    }
+    form{
+        flex-direction: column;
+        align-items: center;
+    }
+    #button{
+        width: 70%;
+    }
+}
