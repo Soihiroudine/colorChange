@@ -1,6 +1,3 @@
-// const majuscule = "ABCDEFGHIJKLMNOPKRSTUVWXYZ";
-// const miniscule = "abcdefghijklmnopkrstuvwxyz";
-// const nombre = "0123456789";
 
 const couleur = Array("#90caf9", "#aed581", "#e57373", "#eae984");
 
@@ -22,6 +19,7 @@ let buttonCouleur = document.querySelectorAll(".nth");
 // retourne une nombre aléatoire
 function getRandomInt(max) { return Math.floor(Math.random() * max);}
 
+// Permet la manipulation de l'affichage du formulaire dans la page web
 function afficheFermeFormulaire(aff, sectAff, sectCoul, textButton){
     formulaire.style.display = aff; 
     sectionAffiche.style.top = sectAff;
@@ -29,10 +27,16 @@ function afficheFermeFormulaire(aff, sectAff, sectCoul, textButton){
     buttonManipAfficheFormulaire.innerHTML = textButton;
 }
 
+function fenetre(tailleX, tailleY, description){
+    // faire une minie fenetre permettant l'affiche d'information
+}
+
+// Permet d'affecter au "body" une couleur choisit aléatoirement parmis les couleurs déjà existantent
 window.addEventListener("load", ()=>{
     corp.style = "background-color:"+couleur[getRandomInt(couleur.length)]+";";
     console.log("Bien.")
 })
+
 
 buttonManipAfficheFormulaire.addEventListener("click", () => {
     if(formulaire.style.display !== "none"){ afficheFermeFormulaire("none", "50%", "65%", "Ouvrir le formulaire"); }   
@@ -43,7 +47,6 @@ buttonMise.addEventListener("click", () =>{
     if(!mise.value.length){ afficher.innerHTML = "Valeur par defaut"; }
     else{ afficher.innerHTML = mise.value; }
 });
-
 
 
 for(let i = 0; i < couleur.length; i++){
@@ -62,3 +65,4 @@ copie.addEventListener("click", () =>{
         alert("Texte copié !");
     });
 });
+
