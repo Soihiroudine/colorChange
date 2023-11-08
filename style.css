@@ -3,32 +3,38 @@
     padding: 0;
     box-sizing: border-box;
     font-family: consolas;
-    font-size: 20px;
 }
 
 body{
-    background-color: #ffebee;
+    background-color: #e57373;
     padding: 20px;
-}
-
-h1{
-    margin-top: 120px;
-    display: block;
-    text-align: center;
-    font-size: 40px;
-}
-
-hr, .gros{
     display: flex;
-    margin: 0 auto;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    box-shadow: 1px -1px 5px rgb(70, 70, 70);
+    border-radius: 9px;
+}
+h1{
+    text-align: center;
+    padding: 20px 30px;
+
 }
 
 .gros{
-    margin-top: 40px;
+    margin: 40px;
     outline: none;
     padding: 10px;
     cursor: pointer;
 }
+
 hr{
     width: 40%;
     color: #FFFFFF;
@@ -42,13 +48,6 @@ form{
     display: flex;
     transition : display 2s ease-out; 
     justify-content: center;
-    align-items: center;
-    align-content: center;
-    position: absolute;
-    top: 50%;
-    left:50%;
-    flex-wrap: wrap;
-    transform: translate(-50%, -50%);
 }
 
 
@@ -68,18 +67,13 @@ form{
     cursor: pointer;
 }
 /* ********Fin du formulaire******** */
+
 #sectionAffichage{
-    transition : top 0.5s ease-out; 
+    display: flex;
+    justify-content: center;
     background-color: rgb(94, 169, 235);
     width: 60%;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    position: absolute;
-    top: 65%;
-    left:50%;
-    transform: translate(-50%, -50%);
+    margin:20px;
     border-bottom: 2px solid #000;
     border-radius: 6px;
 }
@@ -109,13 +103,15 @@ form{
     justify-content: center;
     align-items: center;
     align-content: center;
-    position: absolute;
+    /* position: absolute;
     top: 85%;
     left:50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 }
 
 .nth{
+    border: 1px solid #393838;
+    box-shadow: 2px 2px #393838;
     margin: 25px;
     padding: 20px 25px;
     cursor:pointer;
@@ -126,8 +122,4 @@ form{
     font-weight: 600;
 }
 
-.nth:hover{
-    background-color: #FFFFFF;
-    transition: 0.2s;
-}
 
