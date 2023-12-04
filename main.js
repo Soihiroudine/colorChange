@@ -32,23 +32,30 @@ function fenetre(tailleX, tailleY, description){
 }
 
 // Permet d'affecter au "body" une couleur choisit aléatoirement parmis les couleurs déjà existantent
+// cette partie s'exécute à chaque fois que la page se charge 
 window.addEventListener("load", ()=>{
     corp.style = "background-color:"+couleur[getRandomInt(couleur.length)]+";";
     console.log("Bien.")
 })
 
-
+// Interaction avec un button qui va permettre d'afficher ou de fermer un formulaire
 buttonManipAfficheFormulaire.addEventListener("click", () => {
-    if(formulaire.style.display !== "none"){ afficheFermeFormulaire("none", "50%", "65%", "Ouvrir le formulaire"); }   
+    if(formulaire.style.display !== "none"){ 
+        afficheFermeFormulaire("none", "50%", "65%", "Ouvrir le formulaire"); 
+    }   
     else{ afficheFermeFormulaire("flex", "65%", "85%", "Fermer le formulaire"); }
 });
 
+
 buttonMise.addEventListener("click", () =>{
-    if(!mise.value.length){ afficher.innerHTML = "Valeur par defaut"; }
-    else{ afficher.innerHTML = mise.value; }
+    if(!mise.value.length){ 
+        afficher.innerHTML = "Valeur par defaut"; 
+    }else{ 
+        afficher.innerHTML = mise.value;
+    }
 });
 
-
+// Interaction avec les boutton de couleur
 for(let i = 0; i < couleur.length; i++){
     buttonCouleur[i].style.backgroundColor = couleur[i];
     buttonCouleur[i].addEventListener("mousedown", (e) =>{
@@ -60,6 +67,7 @@ for(let i = 0; i < couleur.length; i++){
     });
 }
 
+// Faire l'action de copier
 copie.addEventListener("click", () =>{
     navigator.clipboard.writeText(afficher.innerHTML).then(() => {
         alert("Texte copié !");
